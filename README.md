@@ -1,16 +1,31 @@
-## Hi there 👋
+#include <string>
+#include <vector>
+#include <map>
 
-<!--
-**theshydubii/theshydubii** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+namespace theshydubii {
+class Profile {
+public:
+    auto getCurrentWorkplace() const -> std::string {
+        return "A student, learning and building a portfolio.";
+    }
 
-Here are some ideas to get you started:
+    auto getToolbox() const -> std::vector<std::string> {
+        return {"C", "C++", "C#", "Python", "Rust"};
+    }
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+    auto getFocusAreas() const -> std::vector<std::string> {
+        return {"C-family engineering", "Data workflows", "Gameplay tooling"};
+    }
+
+    auto getGameEngines() const -> std::vector<std::string> {
+        return {"Unity", "Unreal Engine", "Godot"};
+    }
+
+    auto getContact() const -> std::map<std::string, std::string> {
+        return {
+            {"Email", "theshydubii@gmail.com"},
+            {"X", "x.com/theshydubii"}
+        };
+    }
+};
+}
